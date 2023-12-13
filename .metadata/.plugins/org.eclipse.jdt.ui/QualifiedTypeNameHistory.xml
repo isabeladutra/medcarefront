@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="br.com.medcare.model.FichaMedica"/>
+    <fullyQualifiedTypeName name="org.springframework.http.ResponseEntity"/>
+    <fullyQualifiedTypeName name="org.springframework.http.HttpStatus"/>
+    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.PostMapping"/>
+    <fullyQualifiedTypeName name="java.lang.Integer"/>
+    <fullyQualifiedTypeName name="jakarta.persistence.Table"/>
+    <fullyQualifiedTypeName name="org.springframework.data.jpa.repository.JpaRepository"/>
+    <fullyQualifiedTypeName name="br.com.medcare.exceptions.PacienteNaoEncontradoException"/>
+    <fullyQualifiedTypeName name="br.com.medcare.services.PacientePrescricaoMedicamentoRepository"/>
+    <fullyQualifiedTypeName name="br.com.medcare.mappers.PrescricaoMapper"/>
+    <fullyQualifiedTypeName name="br.com.medcare.dto.MedicamentoRequest.PrescricaoRequest"/>
+    <fullyQualifiedTypeName name="br.com.medcare.model.PacientePrescricaoMedicamento"/>
+    <fullyQualifiedTypeName name="br.com.medcare.model.Medicamentos"/>
+    <fullyQualifiedTypeName name="lombok.Data"/>
+    <fullyQualifiedTypeName name="br.com.medcare.model.Paciente"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="br.com.medcare.dto.ListaMedicamentoResponse"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="br.com.medcare.model.PrescricaoMedicamento"/>
+    <fullyQualifiedTypeName name="java.time.LocalDate"/>
+</qualifiedTypeNameHistroy>
