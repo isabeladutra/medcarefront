@@ -1,0 +1,45 @@
+/* Seu arquivo de estilo CSS */
+
+.cabecalho {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px; /* Adicione um preenchimento conforme necessÃ¡rio */
+  }
+  
+  .logo {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo img {
+    margin-right: 10px; /* Adicione um espaÃ§amento Ã  direita para separar a imagem do texto */
+  }
+  
+  .cabecalho h2 {
+    text-align: center;
+    margin: 0; /* Remove as margens padrÃ£o do parÃ¡grafo */
+    color: green;
+    font-size: 20px; /* Adiciona a cor verde ao texto */
+  }
+
+  /* Adicione ou ajuste as seguintes regras no seu arquivo de estilo CSS */
+
+.botao-cadastro {
+    background-color: #003366; /* Cor azul, vocÃª pode ajustar conforme necessÃ¡rio */
+    color: white;
+    border: none;
+    padding: 15px 30px; /* Ajuste o padding conforme necessÃ¡rio para tornar o botÃ£o maior */
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px; /* Adiciona bordas arredondadas */
+  }
+  
+  .botao-cadastro:hover {
+    background-color: #003366;/* Cor azul mais escura no hover, ajuste conforme necessÃ¡rio */
+  }
+  
+  

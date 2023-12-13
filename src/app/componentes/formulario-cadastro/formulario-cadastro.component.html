@@ -1,0 +1,44 @@
+<header class="header">
+    <h2>Cadastre-se :</h2>
+</header>
+<form class="formulario-cadastro" [formGroup]="formulario">
+    <label for="nome">Nome:</label>
+    <input type="text" id="nome" name="nome" formControlName="nome" required>
+  
+    <!-- Campo Endereço -->
+    <label for="endereco">Endereço:</label>
+    <input type="text" id="endereco" name="endereco" formControlName="endereco" required>
+  
+    <!-- Campo Email -->
+    <label for="email">Email:</label>
+    <input type="text" id="email" name="email" formControlName="email" required>
+  
+    <!-- Campo Password -->
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" formControlName="password" required>
+  
+    <!-- Campo CPF -->
+    <label for="cpf">CPF:</label>
+    <input type="number" id="cpf" name="cpf" formControlName="cpf" placeholder="12345678900" required>
+  
+    <!-- Campo Idade -->
+    <label for="idade">Idade:</label>
+    <input type="number" id="idade" name="idade" formControlName="idade" required>
+  
+    <!-- Campo Celular -->
+    <label for="celular">Celular:</label>
+    <input type="number" id="celular" name="celular" formControlName="celular" pattern="[0-9]" required>
+  
+    <!-- Campo CRM -->
+    <label for="crm">CRM:</label>
+    <input type="number" id="crm" name="crm" formControlName="crm" required>
+  
+    <!-- Campo Especialidade -->
+    <label for="especialidade">Especialidade:</label>
+    <input type="text" id="especialidade" name="especialidade" formControlName="especialidade" required>
+  
+    <!-- Botões Salvar e Cancelar -->
+    <button type="submit" (click)="cadastrarUsuario()">Salvar</button>
+    <button routerLink="/">Cancelar</button>
+</form>
+  
