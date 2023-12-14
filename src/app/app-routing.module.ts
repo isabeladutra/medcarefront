@@ -4,6 +4,7 @@ import { FormularioCadastroComponent } from './componentes/formulario-cadastro/f
 import { LoginComponent } from './componentes/login/login.component';
 import { PaginaUsuarioComponent } from './componentes/pagina-usuario/pagina-usuario.component';
 import { ListaPacientesComponent } from './componentes/lista-pacientes/lista-pacientes.component';
+import { MedicamentosComponent } from './componentes/medicamentos/medicamentos.component';
 
 const routes: Routes = [
   {
@@ -21,6 +22,10 @@ const routes: Routes = [
   {
     path: 'listaPacientes',
     component: ListaPacientesComponent
+  },
+  {
+    path: 'medicamentos',
+    component: MedicamentosComponent
   }
 ];
 

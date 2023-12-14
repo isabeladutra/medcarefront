@@ -1,0 +1,36 @@
+/* lista-pacientes.component.css */
+
+/* Estilos para a tabela */
+table {
+    width: 80%;
+    margin: 20px auto; /* Centralizando a tabela com margens automáticas */
+    border-collapse: collapse;
+    background-color: white;
+    border: 1px solid #ddd;
+  }
+  
+  /* Estilos para as células de cabeçalho */
+  th {
+    background-color: #f2f2f2;
+    border: 1px solid #ddd;
+    padding: 6px;
+    text-align: left;
+    font-size: 14px;
+  }
+  
+  /* Estilos para as células de dados */
+  td {
+    border: 1px solid #ddd;
+    padding: 6px;
+    font-size: 12px;
+  }
+  
+  /* Estilos para linhas alternadas */
+  tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  .header {
+    text-align: center;
+    color: white;
+  }

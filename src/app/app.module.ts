@@ -11,6 +11,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { LoginComponent } from './componentes/login/login.component';
 import { PaginaUsuarioComponent } from './componentes/pagina-usuario/pagina-usuario.component';
 import { ListaPacientesComponent } from './componentes/lista-pacientes/lista-pacientes.component';
+import { MedicamentosComponent } from './componentes/medicamentos/medicamentos.component';
 
 
 
@@ -22,7 +23,8 @@ import { ListaPacientesComponent } from './componentes/lista-pacientes/lista-pac
     FormularioCadastroComponent,
     LoginComponent,
     PaginaUsuarioComponent,
-    ListaPacientesComponent
+    ListaPacientesComponent,
+    MedicamentosComponent
   ],
   imports: [
     BrowserModule,

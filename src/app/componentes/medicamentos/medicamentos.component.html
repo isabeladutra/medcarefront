@@ -1,0 +1,19 @@
+<header class="header">
+    <h2>Cadastre um medicamento :</h2>
+</header>
+<form class="formulario-cadastro" [formGroup]="formulariomedicamento">
+  <label for="nome">Nome:</label>
+  <input type="text" id="nome" formControlName="nome" />
+
+  <div formGroupName="prescricao">
+    <label for="nomeMedicamento">Nome do Medicamento:</label>
+    <input type="text" id="nomeMedicamento" formControlName="nomeMedicamento" />
+
+    <label for="quantidade">Quantidade:</label>
+    <input type="number" id="quantidade" formControlName="quantidade" />
+
+    <label for="dataPrescricao">Data de Prescrição:</label>
+    <input type="text" id="dataPrescricao" formControlName="dataPrescricao" />
+  </div>
+
+</form>
