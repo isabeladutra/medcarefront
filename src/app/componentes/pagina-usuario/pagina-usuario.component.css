@@ -1,0 +1,10 @@
+.link-pacientes {
+    cursor: pointer; /* Define o cursor como um ponteiro ao passar o mouse sobre o link */
+    color: #003366;
+    margin-left: 10px; /* Adicione qualquer estilo de cor desejado */
+  }
+  
+  .link-pacientes:hover {
+    color: blue;
+    filter: brightness(80%); /* Adicione uma cor diferente quando o mouse passar sobre o link (opcional) */
+  }

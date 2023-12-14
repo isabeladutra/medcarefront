@@ -2,7 +2,6 @@
 
 .cabecalho {
     display: flex;
-    justify-content: space-between;
     align-items: center;
     padding: 10px; /* Adicione um preenchimento conforme necessÃ¡rio */
   }
@@ -32,7 +31,6 @@
     padding: 15px 30px; /* Ajuste o padding conforme necessÃ¡rio para tornar o botÃ£o maior */
     text-align: center;
     text-decoration: none;
-    display: inline-block;
     font-size: 16px;
     cursor: pointer;
     border-radius: 5px; /* Adiciona bordas arredondadas */
@@ -41,5 +39,12 @@
   .botao-cadastro:hover {
     background-color: #003366;/* Cor azul mais escura no hover, ajuste conforme necessÃ¡rio */
   }
+
+.botao-direita {
+  margin-left: 400px;
+}
+.botao-login {
+  margin-left: 5px;
+}  
   
   

@@ -1,0 +1,16 @@
+<header class="header">
+    <h2>Login</h2>
+</header>
+<div>
+    <form class="formulario-login" [formGroup]="formulariologin">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" formControlName="email" required>
+
+        <label for="password">Senha:</label>
+        <input type="password" id="password" name="password" formControlName="password" required>
+      
+
+        <button type="submit" (click) = "logar()" class="botao-login">Login</button>
+        <button routerLink="/">Cancelar</button>
+    </form>
+</div>

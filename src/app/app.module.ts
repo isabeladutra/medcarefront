@@ -8,6 +8,9 @@ import { RodapeComponent } from './componentes/rodape/rodape.component';
 import { FormularioCadastroComponent } from './componentes/formulario-cadastro/formulario-cadastro.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { LoginComponent } from './componentes/login/login.component';
+import { PaginaUsuarioComponent } from './componentes/pagina-usuario/pagina-usuario.component';
+import { ListaPacientesComponent } from './componentes/lista-pacientes/lista-pacientes.component';
 
 
 
@@ -16,7 +19,10 @@ import { HttpClientModule } from '@angular/common/http';
     AppComponent,
     CabecalhoComponent,
     RodapeComponent,
-    FormularioCadastroComponent
+    FormularioCadastroComponent,
+    LoginComponent,
+    PaginaUsuarioComponent,
+    ListaPacientesComponent
   ],
   imports: [
     BrowserModule,
