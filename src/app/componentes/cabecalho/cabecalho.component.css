@@ -1,50 +1,53 @@
 /* Seu arquivo de estilo CSS */
 
 .cabecalho {
-    display: flex;
-    align-items: center;
-    padding: 10px; /* Adicione um preenchimento conforme necessÃ¡rio */
-  }
-  
-  .logo {
-    display: flex;
-    align-items: center;
-  }
-  
-  .logo img {
-    margin-right: 10px; /* Adicione um espaÃ§amento Ã  direita para separar a imagem do texto */
-  }
-  
-  .cabecalho h2 {
-    text-align: center;
-    margin: 0; /* Remove as margens padrÃ£o do parÃ¡grafo */
-    color: green;
-    font-size: 20px; /* Adiciona a cor verde ao texto */
-  }
+  display: flex;
+  align-items: center;
+  padding: 10px; /* Adicione um preenchimento conforme necessário */
+  background: transparent;
+  width: 100%;
+  top: 0; /* Posiciona o cabeçalho no topo da tela */
+  z-index: 1000; /* Garante que o cabeçalho esteja acima de outros elementos na página */
+}
 
-  /* Adicione ou ajuste as seguintes regras no seu arquivo de estilo CSS */
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  margin-right: 10px;
+}
+
+.cabecalho h2 {
+  text-align: center;
+  margin: 0;
+  color: green;
+  font-size: 20px;
+}
+
+/* Adicione ou ajuste as seguintes regras no seu arquivo de estilo CSS */
 
 .botao-cadastro {
-    background-color: #003366; /* Cor azul, vocÃª pode ajustar conforme necessÃ¡rio */
-    color: white;
-    border: none;
-    padding: 15px 30px; /* Ajuste o padding conforme necessÃ¡rio para tornar o botÃ£o maior */
-    text-align: center;
-    text-decoration: none;
-    font-size: 16px;
-    cursor: pointer;
-    border-radius: 5px; /* Adiciona bordas arredondadas */
-  }
-  
-  .botao-cadastro:hover {
-    background-color: #003366;/* Cor azul mais escura no hover, ajuste conforme necessÃ¡rio */
-  }
+  background-color: #003366;
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.botao-cadastro:hover {
+  background-color: #003366;
+}
 
 .botao-direita {
-  margin-left: 400px;
+  margin-left: 400px; /* Use 'auto' para empurrar o botão para a direita */
 }
+
 .botao-login {
   margin-left: 5px;
 }  
-  
-  
