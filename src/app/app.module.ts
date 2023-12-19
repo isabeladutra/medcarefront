@@ -12,6 +12,10 @@ import { LoginComponent } from './componentes/login/login.component';
 import { PaginaUsuarioComponent } from './componentes/pagina-usuario/pagina-usuario.component';
 import { ListaPacientesComponent } from './componentes/lista-pacientes/lista-pacientes.component';
 import { MedicamentosComponent } from './componentes/medicamentos/medicamentos.component';
+import { MedicamentosListarComponent } from './componentes/medicamentos/medicamentos-listar/medicamentos-listar.component';
+import { PaginaPrincipalMedicamentosComponent } from './componentes/medicamentos/pagina-principal-medicamentos/pagina-principal-medicamentos.component';
+import { MedicamentosEditarComponent } from './componentes/medicamentos/medicamentos-editar/medicamentos-editar.component';
+import { CriarInternacoesComponent } from './componentes/criar-internacoes/criar-internacoes.component';
 
 
 
@@ -24,7 +28,11 @@ import { MedicamentosComponent } from './componentes/medicamentos/medicamentos.c
     LoginComponent,
     PaginaUsuarioComponent,
     ListaPacientesComponent,
-    MedicamentosComponent
+    MedicamentosComponent,
+    MedicamentosListarComponent,
+    PaginaPrincipalMedicamentosComponent,
+    MedicamentosEditarComponent,
+    CriarInternacoesComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,33 @@
+<div>
+  <label class="label-header" for="nomePaciente">Pesquisar por Nome do Paciente:</label>
+  <input type="text" id="nomePaciente" [(ngModel)]="nomePaciente" required />
+  <button class="botao" (click)="pesquisarPorNome()">Pesquisar</button>
+</div>
+
+<div *ngIf="paciente && listaPrescricao && listaPrescricao.length > 0">
+  <div class="tabela"*ngIf="listaMedicamentos">
+    <h1>Informações do Paciente</h1>
+      <ul>
+        <li><strong>Nome:</strong> {{ paciente.nome }}</li>
+        <li><strong>Idade:</strong> {{ paciente.idade }}</li>
+        <li><strong>Telefone:</strong> {{ paciente.telefone }}</li>
+        <li><strong>Endereço:</strong> {{ paciente.endereco }}</li>
+        <li><strong>CPF:</strong> {{ paciente.cpf }}</li>
+        <li><strong>Data de Nascimento:</strong> {{ paciente.dataDenascimento | date: 'dd/MM/yyyy' }}</li>
+        <li><strong>Celular:</strong> {{ paciente.celular }}</li>
+        <li><strong>Email:</strong> {{ paciente.user.email }}</li>
+      </ul>
+    
+      <h1>Lista de Prescrições</h1>
+      <ul *ngFor="let prescricao of listaPrescricao; let i = index">
+        <li>
+          <strong>Medicamento:</strong> {{ prescricao.nomeMedicamento }}<br>
+          <strong>Quantidade:</strong> {{ prescricao.quantidade }}<br>
+          <strong>Data de Prescrição:</strong> {{ prescricao.formattedDataPrescricao }}<br>
+          <button class="botao-editar" routerLink="/editarMedicamento" (click)="editarPrescricao(prescricao.nomeMedicamento, prescricao.quantidade, prescricao.formattedDataPrescricao)">Editar</button>
+          <button class="botao-excluir" (click)="excluirPrescricao(i)">Excluir</button>
+        </li>
+      </ul>
+
+  </div>
+</div>

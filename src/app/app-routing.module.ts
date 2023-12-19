@@ -5,6 +5,9 @@ import { LoginComponent } from './componentes/login/login.component';
 import { PaginaUsuarioComponent } from './componentes/pagina-usuario/pagina-usuario.component';
 import { ListaPacientesComponent } from './componentes/lista-pacientes/lista-pacientes.component';
 import { MedicamentosComponent } from './componentes/medicamentos/medicamentos.component';
+import { PaginaPrincipalMedicamentosComponent } from './componentes/medicamentos/pagina-principal-medicamentos/pagina-principal-medicamentos.component';
+import { MedicamentosListarComponent } from './componentes/medicamentos/medicamentos-listar/medicamentos-listar.component';
+import { MedicamentosEditarComponent } from './componentes/medicamentos/medicamentos-editar/medicamentos-editar.component';
 
 const routes: Routes = [
   {
@@ -24,8 +27,20 @@ const routes: Routes = [
     component: ListaPacientesComponent
   },
   {
-    path: 'medicamentos',
+    path: 'criarMedicamentos',
     component: MedicamentosComponent
+  },
+  {
+    path: 'medicamentos',
+    component: PaginaPrincipalMedicamentosComponent
+  },
+  {
+    path: 'listarMedicamentos',
+    component: MedicamentosListarComponent
+  },
+  {
+    path: 'editarMedicamento',
+    component: MedicamentosEditarComponent
   }
 ];
 

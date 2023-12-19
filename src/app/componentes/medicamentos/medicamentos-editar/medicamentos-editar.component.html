@@ -1,0 +1,19 @@
+<header class = "label-header">
+  <h2>Editar Prescrição</h2>
+</header>
+<div>
+    <form [formGroup]="formularioeditarmedicamento" class="tabela">
+      <label for="novaQuantidade">Nova Quantidade:</label>
+      <input type="text" id="novaQuantidade" formControlName="novaQuantidade" />
+      <br>
+      <label for="novoNomeMedicamento">Novo Nome do Medicamento:</label>
+      <input type="text" id="novoNomeMedicamento" formControlName="novoNomeMedicamento" />
+      <br>
+      <label for="novaDataPrescricao">Nova Data de Prescrição:</label>
+      <input type="text" id="novaDataPrescricao" formControlName="novaDataPrescricao" />
+      <br>
+      <button (click)="print()">Print</button>
+      <button  class="botao" (click)="editarPrescricao()">Salvar Edição</button>
+    </form>
+  </div>
+  
