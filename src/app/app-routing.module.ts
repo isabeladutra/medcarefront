@@ -8,6 +8,7 @@ import { MedicamentosComponent } from './componentes/medicamentos/medicamentos.c
 import { PaginaPrincipalMedicamentosComponent } from './componentes/medicamentos/pagina-principal-medicamentos/pagina-principal-medicamentos.component';
 import { MedicamentosListarComponent } from './componentes/medicamentos/medicamentos-listar/medicamentos-listar.component';
 import { MedicamentosEditarComponent } from './componentes/medicamentos/medicamentos-editar/medicamentos-editar.component';
+import { CriarInternacoesComponent } from './componentes/criar-internacoes/criar-internacoes.component';
 
 const routes: Routes = [
   {
@@ -41,6 +42,9 @@ const routes: Routes = [
   {
     path: 'editarMedicamento',
     component: MedicamentosEditarComponent
+  },{
+    path: 'criarInternacao',
+    component: CriarInternacoesComponent
   }
 ];
 

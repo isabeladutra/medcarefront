@@ -72,8 +72,6 @@ export class MedicamentosEditarComponent implements OnInit{
 
   }
 
-  print(){
-    console.log("editar "+ this.nomeMedicamento)
-  }
+ 
 
 }

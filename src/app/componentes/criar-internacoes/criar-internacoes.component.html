@@ -1,1 +1,29 @@
-<p>criar-internacoes works!</p>
+<header class="header">
+    <h2>Cadastre uma internação :</h2>
+</header>
+<form class="formulario-cadastro" [formGroup]="formulario">
+    <label for="pacienteNome">Nome do Paciente:</label>
+    <input type="text" id="pacienteNome" name="pacienteNome" formControlName="pacienteNome" required>
+  
+    <!-- Campo Endereço -->
+    <label for="motivoInternacao">Motivo Da Internação:</label>
+    <input type="text" id="motivoInternacao" name="motivoInternacao" formControlName="motivoInternacao" required>
+  
+    <!-- Campo Email -->
+    <label for="nomeHospital">Nome do Hospital:</label>
+    <input type="text" id="nomeHospital" name="nomeHospital" formControlName="nomeHospital" required>
+  
+    <!-- Campo Password -->
+    <label for="dataEntrada">Data de Entrada:</label>
+    <input type="text" id="dataEntrada" name="dataEntrada" formControlName="dataEntrada" required>
+  
+    <!-- Campo CPF -->
+    <label for="dataSaida">Data de Saída:</label>
+    <input type="text" id="dataSaida" name="dataSaida" formControlName="dataSaida" placeholder="12345678900" required>
+  
+  
+    <!-- Botões Salvar e Cancelar -->
+    <button type="submit" (click)="cadastrar()">Salvar</button>
+    <button routerLink="/">Cancelar</button>
+</form>
+  
