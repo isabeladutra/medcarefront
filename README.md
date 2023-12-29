@@ -1,5 +1,5 @@
 # Medcare
-Esse projeto é o front da minha aplicação Medcare, um projeto para o meu tcc da pós graduação.
+Esse projeto é o front da minha aplicação Medcare, um projeto para o meu tcc da pós graduação. <br>
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.8.
 
 ## Development server
