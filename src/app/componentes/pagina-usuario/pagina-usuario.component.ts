@@ -10,5 +10,10 @@ export class PaginaUsuarioComponent implements OnInit {
   ngOnInit(): void {
     
   }
+  showInternacoes: boolean = false;
+
+  toggleInternacoes() {
+    this.showInternacoes = !this.showInternacoes;
+  }
 
 }

@@ -1,5 +1,14 @@
-<a class="link-pacientes" routerLink="/listaPacientes">Pacientes</a>
-
-  <a class="link-pacientes" routerLink="/medicamentos">Medicamentos</a>
-
-  <a class="link-pacientes" routerLink="/criarInternacao"> Internações</a>
+<nav>
+  <ul class="menu">
+    <li><a class="link-pacientes" routerLink="/listaPacientes">Pacientes</a></li>
+    <li><a class="link-pacientes" routerLink="/medicamentos">Medicamentos</a></li>
+    <li (click)="toggleInternacoes()">
+      <a>Internações</a>
+      <ul *ngIf="showInternacoes" class="submenu">
+        <li><a routerLink="/criarInternacao">Criar Internação</a></li>
+        <li><a routerLink="/listarInternacao">Listar Internação</a></li>
+        <!-- Adicione outros links de internações aqui -->
+      </ul>
+    </li>
+  </ul>
+</nav>

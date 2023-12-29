@@ -1,0 +1,18 @@
+<div>
+    <label class="label-header" for="nomePaciente">Pesquisar por Nome do Paciente:</label>
+    <input type="text" id="nomePaciente" [(ngModel)]="nomePaciente" required />
+    <button class="botao" (click)="pesquisarPorNome()">Pesquisar</button>
+</div>
+<div class="tabela" *ngIf="internacaoLista">
+    <h2>Lista de Internações</h2>
+    <ul>
+      <li *ngFor="let internacao of internacaoLista.detalhesInternacaoList">
+        <p>Data de Entrada: {{ internacao.dataEntradaInternacao | date }}</p>
+        <p>Data de Saída: {{ internacao.dataSaidaInternacao | date }}</p>
+        <p>Hospital: {{ internacao.nomeHospital }}</p>
+        <p>Motivo: {{ internacao.motivoInternacao }}</p>
+        <button>Editar</button>
+        <button>Excluir</button>
+      </li>
+    </ul>
+  </div>

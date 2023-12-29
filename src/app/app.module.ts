@@ -15,7 +15,8 @@ import { MedicamentosComponent } from './componentes/medicamentos/medicamentos.c
 import { MedicamentosListarComponent } from './componentes/medicamentos/medicamentos-listar/medicamentos-listar.component';
 import { PaginaPrincipalMedicamentosComponent } from './componentes/medicamentos/pagina-principal-medicamentos/pagina-principal-medicamentos.component';
 import { MedicamentosEditarComponent } from './componentes/medicamentos/medicamentos-editar/medicamentos-editar.component';
-import { CriarInternacoesComponent } from './componentes/criar-internacoes/criar-internacoes.component';
+import { CriarInternacoesComponent } from './componentes/internacao/criar-internacoes/criar-internacoes.component';
+import { ListarInternacaoComponent } from './componentes/internacao/listar-internacao/listar-internacao.component';
 
 
 
@@ -32,7 +33,8 @@ import { CriarInternacoesComponent } from './componentes/criar-internacoes/criar
     MedicamentosListarComponent,
     PaginaPrincipalMedicamentosComponent,
     MedicamentosEditarComponent,
-    CriarInternacoesComponent
+    CriarInternacoesComponent,
+    ListarInternacaoComponent
   ],
   imports: [
     BrowserModule,

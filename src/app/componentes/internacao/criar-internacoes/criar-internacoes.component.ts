@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { InternacaoService } from '../internacoes.service';
+import { InternacaoService } from '../../internacoes.service';
 
 @Component({
   selector: 'app-criar-internacoes',

@@ -1,0 +1,43 @@
+/* styles.css (ou seu arquivo de estilo global) */
+
+.header {
+    text-align: center;
+    color: white;
+  }
+.formulario-internacao {
+    max-width: 400px;
+    margin: auto;
+    padding: 20px;
+    background-color: #f2f2f2;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .formulario-internacao label {
+    display: block;
+    margin-bottom: 8px;
+  }
+  
+  .formulario-internacao input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 16px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .formulario-internacao button {
+    background-color: #003366;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+    
+  
+  .formulario-internacao button:hover {
+    background-color: #003366;
+  }
+  
