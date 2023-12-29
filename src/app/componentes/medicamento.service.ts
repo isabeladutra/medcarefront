@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { HttpClient, HttpErrorResponse, HttpHeaders } from '@angular/common/http';
 import { Observable, of } from 'rxjs'; // Importe o operador 'of'
-import { catchError } from 'rxjs/operators'; // Importe o operador 'catchError'
+import { catchError, map } from 'rxjs/operators'; // Importe o operador 'catchError'
 import { Medicamento } from './medicamento';
 import { AuthService } from './authentication.service';
 import { MedicamentoLista } from './medicamentolista';
@@ -21,25 +21,39 @@ export class MedicamentoService {
      this.token = this.authService.getAccessToken();
  }
 
+    cadastrar(medicamento: Medicamento): Observable<string> {
+      if (!this.token) {
+        console.error('Token de acesso não disponível.');
+        return of('Token de acesso não disponível');
+      }
 
+      let headers = new HttpHeaders();
+      headers = headers.set('Authorization', 'Bearer ' + this.token.toString());
+      console.log("token: " + this.token.toString());
+
+      return this.http.post(`${this.apiUrl}/salvar`, medicamento, { headers: headers, responseType: 'text' })
+        .pipe(
+          map(response => response as string),
+          catchError((error: any) => {
+            if (error instanceof HttpErrorResponse) {
+              if (error.status === 404) {
+                return throwError('Paciente não está cadastrado no sistema');
+              } else if (error.status === 400) {
+                return throwError('Erro na requisição: ' + error.error);
+              }
+              // Adicione mais casos conforme necessário
+            }
+
+            // Se não for um HttpErrorResponse, propague o erro original
+            return throwError(error);
+          })
+        );
+    }
  
  
   
 
- cadastrar(medicamento: Medicamento) {
-
-
- 
-  if (!this.token) {
-   console.error('Token de acesso não disponível.');
-    // Retorne um Observable vazio ou com um valor padrão
-   return of(); // Use 'of()' para criar um Observable vazio
-  }
-  let headers = new HttpHeaders();
-  headers = headers.set('Authorization', 'Bearer ' + this.token.toString() );
-  console.log("token: " + this.token.toString());
-  return  this.http.post(`${this.apiUrl}/salvar`, medicamento, { headers: headers });
- }
+    
 
  private handleError<T>(operation = 'operation', result?: T) {
     return (error: any): Observable<T> => {

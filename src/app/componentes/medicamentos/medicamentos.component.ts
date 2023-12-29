@@ -43,23 +43,26 @@ export class MedicamentosComponent implements OnInit{
     };
      console.log(medicamento);
    // Chama o serviço para cadastrar o medicamento
-   this.service.cadastrar(medicamento).subscribe((response: any) => {
-    // Verifica se a resposta contém a mensagem de sucesso
-    if (response && response.includes("Medicamentos salvos com sucesso.")) {
-      alert("Medicamentos salvos com sucesso.");
-     
-      // Lógica adicional se necessário
-    } else {
-      alert("Falha ao criar o medicamento");
-      
-      // Lógica adicional se necessário
+   this.service.cadastrar(medicamento).subscribe(
+    {
+      next: response => {
+        // Verifica se a resposta contém a mensagem de sucesso
+        if (response.includes("Medicamentos salvos com sucesso.")) {
+          alert("Medicamentos salvos com sucesso.");
+          // Lógica adicional se necessário
+        } else {
+          // Se a resposta não contiver a mensagem esperada, exiba uma mensagem de erro
+          console.error("Resposta inesperada do servidor:", response);
+          alert("Erro ao cadastrar o medicamento");
+        }
+      },
+      error: (error) => {
+        console.error("Erro ao cadastrar o medicamento", error);
+        alert("Erro ao cadastrar o medicamento");
+        // Lógica adicional se necessário
+      }
     }
-  },
-  (error) => {
-    console.error("Erro ao cadastrar o medicamento", error);
-    alert("Erro ao cadastrar o medicamento");
-    // Lógica adicional se necessário
-  });
-    
+  );
   }
+  
 }
