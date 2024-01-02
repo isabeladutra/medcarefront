@@ -7,12 +7,12 @@
     <h2>Lista de Internações</h2>
     <ul>
       <li *ngFor="let internacao of internacaoLista.detalhesInternacaoList">
-        <p>Data de Entrada: {{ internacao.dataEntradaInternacao | date }}</p>
+        <p>Data de Entrada: {{ internacao.dataEntradaInternacao | date: 'yyyy-MM-dd HH:mm:ss' }}</p>
         <p>Data de Saída: {{ internacao.dataSaidaInternacao | date }}</p>
         <p>Hospital: {{ internacao.nomeHospital }}</p>
         <p>Motivo: {{ internacao.motivoInternacao }}</p>
-        <button>Editar</button>
-        <button>Excluir</button>
+        <button (click)="editarInternacao(internacaoLista.nomePaciente)">Editar</button>
+        <button (click)="excluirInternacao(internacao.dataEntradaInternacao)">Excluir </button>
       </li>
     </ul>
   </div>

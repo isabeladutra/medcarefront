@@ -10,6 +10,7 @@ import { MedicamentosListarComponent } from './componentes/medicamentos/medicame
 import { MedicamentosEditarComponent } from './componentes/medicamentos/medicamentos-editar/medicamentos-editar.component';
 import { CriarInternacoesComponent } from './componentes/internacao/criar-internacoes/criar-internacoes.component';
 import { ListarInternacaoComponent } from './componentes/internacao/listar-internacao/listar-internacao.component';
+import { EditarInternacaoComponent } from './componentes/internacao/editar-internacao/editar-internacao.component';
 
 const routes: Routes = [
   {
@@ -51,6 +52,10 @@ const routes: Routes = [
   {
     path: 'listarInternacao',
     component: ListarInternacaoComponent
+  },
+  {
+    path: 'editarInternacao',
+    component: EditarInternacaoComponent
   }
 ];
 

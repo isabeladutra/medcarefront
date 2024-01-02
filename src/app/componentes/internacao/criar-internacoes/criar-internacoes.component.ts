@@ -24,7 +24,17 @@ export class CriarInternacoesComponent implements OnInit {
   }
 
   cadastrar(): void {
-    this.service.cadastrar(this.formulario.value).subscribe();
+    this.service.cadastrar(this.formulario.value).subscribe(
+      (data) => {
+        console.log('Operação bem-sucedida:', data);
+        // Adicione lógica adicional aqui, se necessário
+      },
+      (error) => {
+        console.error('Erro durante a operação:', error);
+        // Adicione lógica adicional para lidar com o erro, se necessário
+      }
+    
+    );
     
    
     

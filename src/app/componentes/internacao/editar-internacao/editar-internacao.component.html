@@ -1,0 +1,21 @@
+<header class = "label-header">
+    <h2>Editar Internação</h2>
+  </header>
+  <div>
+      <form [formGroup]="formularioeditarinternacao" class="tabela">
+        <label for="motivoInternacao">Motivo da Internação:</label>
+        <input type="text" id="motivoInternacao" formControlName="motivoInternacao" />
+        <br>
+        <label for="nomeHospital">Nome do Hospital:</label>
+        <input type="text" id="nomeHospital" formControlName="nomeHospital" />
+        <br>
+        <label for="dataEntrada">Data de Entrada:</label>
+        <input type="text" id="dataEntrada" formControlName="dataEntrada" />
+        <br>
+        <label for="dataSaida">Data de Saida:</label>
+        <input type="text" id="dataSaida" formControlName="dataSaida" />
+        <br>
+        <button  class="botao">Salvar Edição</button>
+      </form>
+    </div>
+    

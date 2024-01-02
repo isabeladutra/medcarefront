@@ -41,7 +41,8 @@ import { InternacaoLista } from './InternacaoLista';
            let headers = new HttpHeaders();
            headers = headers.set('Authorization', 'Bearer ' + this.token.toString() );
            console.log("token: " + this.token.toString());
-           return  this.http.post(`${this.apiUrl}/adicionar`, internacao, { headers: headers });
+           return this.http.post(`${this.apiUrl}/adicionar`, internacao, { headers: headers, responseType: 'text' });
+
 
     }
 
@@ -58,5 +59,52 @@ import { InternacaoLista } from './InternacaoLista';
         return this.http.get<InternacaoLista>(`${this.apiUrl}/paciente/${encodeURIComponent(nomePaciente)}`, { headers }).pipe(
           catchError(this.handleError)
         );
+    }
+
+    excluir(data: string, nomePaciente: string): Observable<any> {
+      if (!this.token) {
+        console.error('Token de acesso não disponível.');
+        return of();
+      }
+      let headers = new HttpHeaders();
+      headers = headers.set('Authorization', 'Bearer ' + this.token.toString());
+      console.log("token: " + this.token.toString());
+  
+      const params = {
+        nomePaciente: nomePaciente,
+        dataEntrada: data
+      };
+  
+      return this.http.delete(`${this.apiUrl}/excluir`, { params: params, headers: headers, responseType: 'text' }).pipe(
+        catchError((error) => {
+          console.error('Erro ao excluir internação:', error);
+  
+          // Tratar o caso específico de uma resposta que não pode ser interpretada como JSON
+          if (error.status === 200 && error.headers.get('content-type')?.includes('text/plain')) {
+            return of();
+          }
+  
+          return throwError('Ocorreu um erro ao excluir a internação.');
+        })
+      );
+    }
+
+    editar(data: string, nomePaciente: string, intern: Internacao): Observable<any>{
+      if (!this.token) {
+        console.error('Token de acesso não disponível.');
+        return of();
+      }
+      let headers = new HttpHeaders();
+      headers = headers.set('Authorization', 'Bearer ' + this.token.toString());
+      console.log("token: " + this.token.toString());
+  
+      const params = {
+        nomePaciente: nomePaciente,
+        dataEntrada: data
+      };
+
+     return  this.http.put(`${this.apiUrl}/atualizar`,intern, { params: params, headers: headers});
+
+
     }
 }
